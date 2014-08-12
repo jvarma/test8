@@ -1,34 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>OnTheGo - Find places of interest around you</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-      <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+	<meta charset="utf-8">
+	<title>OnTheGo - Find places of interest around you</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Source+Sans+Pro:200|Squada+One" rel="stylesheet" type="text/css">
+
+	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  	<%= csrf_meta_tags %>
+	
+  	<%= render 'layouts/shim' %>
 
 </head>
-<body>
 
-    <header class="navbar navbar-fixed-top navbar-inverse">
-      	<div class="navbar-inner">
-        	<div class="container">
-          		<%= link_to "OnTheGo", '#', id: "logo" %>
-          		<nav>
-            		<ul class="nav pull-right">
-              			<li><%= link_to "Sign in", '#' %></li>
-            		</ul>
-          		</nav>
-        	</div>
-      	</div>
-    </header>
-    
-    <div class="container">
-      <%= yield %>
+<body>
+	<%= render 'layouts/header' %>
+	<div class="container">
+		<%= yield %>
+		<%= render 'layouts/footer' %>
     </div>
 
+		
 </body>
 </html>
 
