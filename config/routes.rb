@@ -1,7 +1,10 @@
 Onthego::Application.routes.draw do
+  get "sellers/new"
   #get "pages/home"
 
   root "pages#home"
+
+  match '/biz/signup',  to: 'sellers#new',  via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
