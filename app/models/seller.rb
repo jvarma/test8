@@ -1,4 +1,6 @@
 class Seller < ActiveRecord::Base
+	has_secure_password
+
 	# Constants
 	EMAIL_FORMAT = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 	
@@ -11,6 +13,5 @@ class Seller < ActiveRecord::Base
 	# :password
 	validates :name, presence: true, length: { maximum: 50	 }
 	validates :email, presence: true, format: { with: EMAIL_FORMAT }, uniqueness: { case_sensitive: false }
-	has_secure_password
 	validates :password, length: { minimum: 6 }
 end
