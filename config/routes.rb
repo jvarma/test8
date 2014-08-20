@@ -6,6 +6,12 @@ Onthego::Application.routes.draw do
     resources :sellers
   end
 
+  resources :sessions, only: [:new, :create, :destroy]
+
+  match '/signin', to: 'sessions#new', via: 'get'
+
+  match '/signout', to: 'sessions#destroy', via: 'delete'
+
   root "pages#home"
 
   #match '/biz/signup',  to: 'sellers#new',  via: 'get'

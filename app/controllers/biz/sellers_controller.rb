@@ -12,6 +12,7 @@ class Biz::SellersController < ApplicationController
   		#@seller = Seller.new(params[:seller])
   		@seller = Seller.new(seller_params)
   		if @seller.save
+        sign_in @seller
   			flash[:success] = "Welcome to OnTheGo!"
   			redirect_to @seller
   		else

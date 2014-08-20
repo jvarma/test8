@@ -1,4 +1,7 @@
 class PagesController < ApplicationController
-  def home
-  end
+	def home
+		if signed_in?
+			redirect_to @current_seller
+		end
+  	end
 end
