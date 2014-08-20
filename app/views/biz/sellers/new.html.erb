@@ -1,25 +1,40 @@
-<h1>Sign up</h1>
+<div class = "page-header">
+	<h1>Sign up<br /><small> And reach out to people around you!</small></h1>
+</div>
+
 <div class="row">
 	<div class="col-md-6 col-md-offset-3">
-		<%= form_for(@seller) do |f| %>
+		<%= form_for(@seller, html: { role: "form" }) do |f| %>
 		<%= render 'shared/error_messages' %>
 
-		<%= f.label :name, "Name of your business" %>
-		<%= f.text_field :name %>
+		<div class = "form-group">
+			<%= f.label :name, "Name of your business", class: "sr-only" %>
+			<%= f.text_field :name, class: "form-control input-lg", placeholder: "Name of your business e.g. John's Store" %>
+		</div>
 
-		<%= f.label :email, "Primary email id" %>
-		<%= f.text_field :email %>
+		<div class = "form-group">
+			<div class="input-group">
+				<%= f.label :email, "Your primary email id", class: "sr-only" %>
+				<div class="input-group-addon input-lg">@</div>
+				<%= f.text_field :email, class: "form-control input-lg", placeholder: "Your primary email id" %>
+			</div>
+		</div>
+		
+		<div class = "form-group">
+			<%= f.label :password, "Create a password", class: "sr-only" %>
+			<%= f.password_field :password, class: "form-control input-lg", placeholder: "Create a password, 6-15 characters long" %>
+		</div>
+		
+		<div class = "form-group">
+			<%= f.label :password_confirmation, "Retype password", class: "sr-only" %>
+			<%= f.password_field :password_confirmation, class: "form-control input-lg", placeholder: "Please re-type the password (same as above)" %>
+		</div>
 
-		<%= f.label :password, "Create a password" %>
-		<%= f.password_field :password %>
-
-		<%= f.label :password_confirmation, "Retype password" %>
-		<%= f.password_field :password_confirmation %>
-
-		<%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+		<%= f.submit "Create my account", class: "btn btn-lg btn-primary btn-block" %>
 		<br /><br />
 		<div><%= link_to "Already have an account? Login here!", signin_path %></div>
-</div>
+	</div>
 
 <% end %>
 </div>
+

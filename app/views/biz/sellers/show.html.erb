@@ -1,25 +1,77 @@
-<h1>
-	<%= @seller.name %>
-</h1>
 
-<%= link_to "My places", "#" %>
-<hr/>
+<div class = "page-header">
+	<h1><%= @seller.name %></h1>
+</div>
 
-<%= link_to "My campaigns", "#" %>
-<hr/>
-
-<%= link_to "Insights", "#" %>
-<hr/>
-
-<%= link_to "Add a user", "#" %>
-<hr/>
-
-<%= link_to "Accounts & settings", "#" %>
-<hr/>
-
-<%= link_to "Templates", "#" %>
-<hr/>
-
-<%= link_to "APIs", "#" %>
-<hr/>
-
+<div class="row">
+	<div class="col-sm-6 col-md-4">
+    	<div class="thumbnail">
+    		<div class="place-icon"></div>
+    		<div class="caption">
+      			<h3>My places</h3>
+        		<p>...</p>
+        		<p><a href="#" class="btn btn-primary" role="button">Add a place</a></p>
+      		</div>
+    	</div>
+  	</div>
+  	<div class="col-sm-6 col-md-4">
+    	<div class="thumbnail">
+      		<div class="campaign-icon"></div>
+    		<div class="caption">
+      			<h3>My campaigns</h3>
+        		<p>...</p>
+        		<p><a href="#" class="btn btn-primary" role="button">New campaign</a></p>
+      		</div>
+    	</div>
+  	</div>
+	<div class="col-sm-6 col-md-4">
+    	<div class="thumbnail">
+    		<div class="insight-icon"></div>
+      		<div class="caption">
+      			<h3>Insights</h3>
+        		<p>...</p>
+        		<p><a href="#" class="btn btn-primary" role="button">View all</a></p>
+      		</div>
+    	</div>
+  	</div>
+  	<div class="col-sm-6 col-md-4">
+    	<div class="thumbnail">
+      		<div class="template-icon"></div>
+      		<div class="caption">
+      			<h3>Templates</h3>
+        		<p>...</p>
+        		<p><a href="#" class="btn btn-primary" role="button">New template</a></p>
+      		</div>
+    	</div>
+  	</div>
+  	<div class="col-sm-6 col-md-4">
+    	<div class="thumbnail">
+      		<div class="users-icon"></div>
+      		<div class="caption">
+      			<h3>Users</h3>
+        		<p>...</p>
+        		<p><a href="#" class="btn btn-primary" role="button">Add new user</a></p>
+      		</div>
+    	</div>
+  	</div>
+	<div class="col-sm-6 col-md-4">
+    	<div class="thumbnail">
+      		<div class="api-icon"></div>
+      		<div class="caption">
+      			<h3>APIs</h3>
+        		<p>...</p>
+        		<p><a href="#" class="btn btn-primary" role="button">Manage</a></p>
+      		</div>
+    	</div>
+  	</div>
+  	<div class="col-sm-6 col-md-4">
+    	<div class="thumbnail">
+      		<div class="settings-icon"></div>
+      		<div class="caption">
+      			<h3>Accounts & settings</h3>
+        		<p>...</p>
+        		<p><a href="#" class="btn btn-primary" role="button">Edit</a></p>
+      		</div>
+    	</div>
+  	</div>
+</div>
