@@ -1,44 +1,28 @@
-	<header class="navbar navbar-dark navbar-fixed-top" role="banner">
+	<header class="navbar  navbar-fixed-top navbar-inverse">
 		<div class="container">
 			<div class="navbar-header">
-				<%= link_to "OnTheGo", root_path, class:"navbar-brand sitename" %>
+				<%= link_to "OnTheGo", root_path, id:"logo" %>
 			</div>
 			<nav class="sitenav collapse navbar-collapse bs-navbar-collapse" role="navigation">
-				<% if signed_in? %>
 				<ul class="nav nav-tabs pull-right" role="tablist">
 
   					<li class="dropdown">
     					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-      						<%= current_seller.email %> <span class="caret"></span>
+      						Select category <span class="caret"></span>
     					</a>
     					<ul class="dropdown-menu" role="menu">
-    						<li><%= link_to "Action 1", '#'%></li>
-							<li><%= link_to "Action 2", '#'%></li>
-							<li><%= link_to "Action 3", '#'%></li>
+    						<li><%= link_to "Gas stations", '#' %></li>
+							<li><%= link_to "Restaurants", '#' %></li>
+							<li><%= link_to "Pubs & bars", '#' %></li>
+							<li><%= link_to "Golf course", '#' %></li>
+							<li><%= link_to "Hotels", '#' %></li>
+							<li><%= link_to "Saloon", '#' %></li>
 							<li class="divider"></li>
-							<li><%= link_to "Logout", signout_path, method: :delete %></li>
-							<li><%= link_to "About OnTheGo", '#' %></li>
+							<li><%= link_to "Search", '#'%></li>
 							
     					</ul>
   					</li>
 				</ul>
-				<% else %>
-				<ul class="nav nav-tabs pull-right" role="tablist">
-
-  					<li class="dropdown">
-    					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-      						Get started <span class="caret"></span>
-    					</a>
-    					<ul class="dropdown-menu" role="menu">
-    						<li><%= link_to "Login in", signin_path%></li>
-							<li><%= link_to "Register", new_seller_path %></li>
-							<li class="divider"></li>
-							<li><%= link_to "About OnTheGo", '#'%></li>
-							
-    					</ul>
-  					</li>
-				</ul>
-				<% end %>
 			</nav>
 			
 		</div>

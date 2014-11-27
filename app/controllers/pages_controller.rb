@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
+
 	def home
-		if signed_in?
-			redirect_to @current_seller
-		end
+		gon.lat = 28.57
+		gon.lng = 77.32
   	end
 end
