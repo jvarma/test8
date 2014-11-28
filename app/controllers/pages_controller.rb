@@ -7,20 +7,39 @@ class PagesController < ApplicationController
 		gon.infoWindowContent = '<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
-      '<h1 id="firstHeading" class="firstHeading">Within 5 miles of your location</h1>'+
+      '<h2 id="firstHeading" class="firstHeading">Within 5 miles...</h2>'+
       '<div id="bodyContent">'+
-      '<p><img src="images/icons/gas_station.png"/><a href=""><big>7 gas stations</big></a></p>'+
-      '<p><img src="images/icons/restaurants.png"/><a href=""><big>3 restaurants</big></a></p>'+
-      '<p><img src="images/icons/theatre.png"/><a href=""><big>1 theatre</big></a></p>'+
-      '<p><img src="images/icons/bar.png"/><a href=""><big>5 bars</big></a></p>'+
-      '<p>Attribution: Uluru, <a href="http://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
-      'http://en.wikipedia.org/w/index.php?title=Uluru</a> '+
-      '(last visited June 22, 2009).</p>'+
+
+		'<table style="width:100%">'+
+  			'<tr>'+
+    			'<td><img src="http://localhost:3000/icons/gas_station_24X24.png"/></td>'+
+    			'<td><a href=""><big>7 gas stations</big></a></td>'+
+    		'</tr>'+
+  			'<tr>'+
+    			'<td><img src="http://localhost:3000/icons/restaurants_24X24.png"/></td>'+
+    			'<td><a href=""><big>3 restaurants</big></a></td>'+
+    		'</tr>'+
+  			'<tr>'+
+    			'<td><img src="http://localhost:3000/icons/theatre_24X24.png"/></td>'+
+    			'<td><a href=""><big>1 movie theatre</big></a></td>'+
+    		'</tr>'+
+  			'<tr>'+
+    			'<td><img src="http://localhost:3000/icons/bar_24X24.png"/></td>'+
+    			'<td><a href=""><big>5 bars</big></a></td>'+
+    		'</tr>'+
+  			'<tr>'+
+    			'<td><b style="color: red;">Offer</b>: Free car wash if you fill 10 gallons of any gas! <a href="">'+
+      	'View details</a></td>'+
+    		'</tr>'+
+ 			'<tr>'+
+    			'<td><b style="color: red;">Offer</b>: Watch "The Gladiator" and the coke is on us! <a href="">'+
+      	'View details</a></td>'+
+    		'</tr>'+
+   			
+		'</table>'+
       '</div>'+
       '</div>'
 
-
-		
 		
 	end
 end
