@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
 
 	def home
+		@page = "home"
 		gon.lat = 28.57
 		gon.lng = 77.32
 		gon.heading = "Within 5 miles of your location"
@@ -13,7 +14,9 @@ class PagesController < ApplicationController
 		'<table style="width:100%">'+
   			'<tr>'+
     			'<td><img src="http://localhost:3000/icons/gas_station_24X24.png"/></td>'+
-    			'<td><a href=""><big>7 gas stations</big></a></td>'+
+    			'<td>'+
+    				'<a href="http://localhost:3000/gas-stations"><big>7 gas stations</big></a>'+
+				'</td>'+
     		'</tr>'+
   			'<tr>'+
     			'<td><img src="http://localhost:3000/icons/restaurants_24X24.png"/></td>'+
@@ -40,6 +43,30 @@ class PagesController < ApplicationController
       '</div>'+
       '</div>'
 
+		
+	end
+
+	def gas_stations
+		@page = "gas"
+
+		gon.lat = 28.57
+		gon.lng = 77.32
+		
+		latlng = Array.new(3)
+
+		lat = 28.5701
+		lng = 77.3201
+		latlng[0] = [lat, lng]
+
+		lat = 28.5703
+		lng = 77.3202
+		latlng[1] = [lat, lng]
+
+		lat = 28.5705
+		lng = 77.3189
+		latlng[2] = [lat, lng]
+
+		gon.latlng = latlng
 		
 	end
 end

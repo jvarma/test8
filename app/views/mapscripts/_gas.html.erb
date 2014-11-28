@@ -1,0 +1,31 @@
+<script>
+
+	function initialize() {
+		var myLatLng = new google.maps.LatLng(gon.lat, gon.lng);
+
+		var mapProp = {
+			center: myLatLng,
+  			zoom:18,
+  			panControl: false,
+  			zoomControl: false,
+  			mapTypeId:google.maps.MapTypeId.ROADMAP
+  		};
+				
+		var map=new google.maps.Map(document.getElementById("map-canvas"), mapProp);
+
+		for (var x = 0; x < gon.latlng.length; x++) {
+			var position = new google.maps.LatLng(gon.latlng[x][0], gon.latlng[x][1]);
+			new google.maps.Marker({
+				position: position,
+				map: map
+			});
+		} 
+
+
+
+
+
+	}
+
+			google.maps.event.addDomListener(window, 'load', initialize);
+</script>

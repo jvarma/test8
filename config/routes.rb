@@ -12,6 +12,8 @@ Onthego::Application.routes.draw do
 
   match '/signout', to: 'sessions#destroy', via: 'delete'
 
+  match '/gas-stations', to: 'pages#gas_stations', via: 'get', as: :gas_stations
+
   root "pages#home"
 
   #match '/biz/signup',  to: 'sellers#new',  via: 'get'
