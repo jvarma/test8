@@ -6,38 +6,41 @@ class PagesController < ApplicationController
 		gon.lng = 77.32
 		gon.heading = "Within 5 miles of your location"
 		gon.infoWindowContent = '<div class="infowindow">'+
-      '<h2 id="firstHeading" class="firstHeading">Within 5 miles...</h2>'+
-      '<div id="bodyContent">'+
+      	'<div id="bodyContent">'+
 
-		'<table style="width:100%">'+
-  			'<tr>'+
-    			'<td><img src="http://localhost:3000/icons/gas_station_24X24.png"/></td>'+
-    			'<td>'+
-    				'<a href="http://localhost:3000/gas-stations"><big>3 gas stations</big></a>'+
-				'</td>'+
-    		'</tr>'+
-  			'<tr>'+
-    			'<td><img src="http://localhost:3000/icons/restaurants_24X24.png"/></td>'+
-    			'<td><a href=""><big>5 restaurants</big></a></td>'+
-    		'</tr>'+
-  			'<tr>'+
-    			'<td><img src="http://localhost:3000/icons/theatre_24X24.png"/></td>'+
-    			'<td><a href="http://localhost:3000/movies"><big>1 movie theatre</big></a></td>'+
-    		'</tr>'+
-  			'<tr>'+
-    			'<td><img src="http://localhost:3000/icons/bar_24X24.png"/></td>'+
-    			'<td><a href=""><big>5 bars</big></a></td>'+
-    		'</tr>'+
-  			'<tr>'+
-    			'<td><b style="color: red;">Offer</b>: Free car wash if you fill 10 gallons of any gas! <a href="">'+
-      	'View details</a></td>'+
-    		'</tr>'+
- 			'<tr>'+
-    			'<td><b style="color: red;">Offer</b>: Watch "The Gladiator" and the coke is on us! <a href="">'+
-      	'View details</a></td>'+
-    		'</tr>'+
-   			
-		'</table>'+
+
+      	'<div class="panel panel-primary">'+
+  			'<div class="panel-heading"><big>Offers within 5 miles...</big></div>'+
+  			'<table class="table">'+
+				'<tr>'+
+					'<td align="center">'+
+						'<a href=""><img src="http://localhost:3000/coupons/coupon_1.jpg"/></a>'+
+					'</td>'+
+					'<td align="center">'+
+						'<a href=""><img src="http://localhost:3000/coupons/coupon_2.jpg"/></a>'+
+					'</td>'+
+					'<td align="center">'+
+						'</a><img src="http://localhost:3000/coupons/coupon_3.jpg"/></a>'+
+					'</td>'+
+				'</tr>'+
+			'</table>'+
+			'<table class="table">'+
+				'<tr><td align="left">'+
+					'<a href="">7 more offers!</a>'+
+				'</td></tr>'+
+			'</table>'+
+		'</div>'+
+
+
+		'<div class="panel panel-info">'+
+  			'<div class="panel-heading"><b>Around you...</b></div>'+
+  			'<ul class="list-group">'+
+    			'<li class="list-group-item"><a href="http://localhost:3000/gas-stations"><big>3 gas stations</big></a></li>'+
+    			'<li class="list-group-item"><a href=""><big>5 restaurants</big></a></li>'+
+    			'<li class="list-group-item"><a href="http://localhost:3000/movies"><big>1 movie theatre</big></a></li>'+
+    			'<li class="list-group-item"><a href=""><big>5 bars</big></a></li>'+
+  			'</ul>'+
+		'</div>'+
       '</div>'+
       '</div>'
 

@@ -124,4 +124,12 @@ input {
   height: 100%;
 }
 
-
+.infowindow {
+  -moz-box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px; 
+  -webkit-box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px; 
+  box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px; 
+  background-color:#fff;
+  opacity:0.9; 
+  border-radius: 10px;
+  /* z-index:-1; */
+}
