@@ -22,37 +22,61 @@
 		});
 
 		var contentString = '<div class="infowindow">'+
-      '<h2 id="firstHeading" class="firstHeading">Next change @ 3:30 PM...</h2>'+
-      '<div id="bodyContent">'+
-      	'<iframe title="YouTube Video" src="http://www.youtube.com/embed/hqiNL4Hn04A" width="100%" frameborder="1" allowfullscreen></iframe>'+
-      	'<br />'+
-      	'When you <a href=""><b>buy tickets</b></a> for this movie, <b>your coke and popcorn is on us!</b>'+
+      		
+				'<div class="panel panel-primary">'+
+  					'<div class="panel-heading"><big>Next change @ 3:30 PM</big></div>'+
+  					'<table class="table">'+
+						'<tr>'+
+							'<td align="center">'+
+								'<object data="http://www.youtube.com/embed/hqiNL4Hn04A"></object>'+						
+							'</td>'+
+						'</tr>'+
+					'</table>'+
+					'<table class="table">'+
 
-		'<table style="width:100%">'+
-			'<th>More movies here...</th>'+
-  			'<tr>'+
-    			'<td>3:30 PM</td>'+
-    			'<td>'+
-    				'<big>The man who new infinity</big>'+
-				'</td>'+
-				'<td>'+
-    				'<a href="">Available!</a>'+
-				'</td>'+
-    		'</tr>'+
-    		'<tr>'+
-    			'<td>3:50 PM</td>'+
-    			'<td>'+
-    				'<big>Iron Man 3</big>'+
-				'</td>'+
-				'<td>'+
-    				'<a href="">Running out!</a>'+
-				'</td>'+
-    		'</tr>'+
-		'</table>'+
-		'<a href="">View all</a> (7) | '+
-		'<a href="">Directions</a>'+
-      '</div>'+
-      '</div>'
+						'<tr>'+
+							'<td align="left">'+
+								'<a href="" style="color:red;"><big>Running out!</big></a>'+
+							'</td>'+
+							'<td align="left">'+
+								'<big>The Man Who Knew Infinity</big>'+
+							'</td>'+
+							'<td align="left">'+
+								'<big>3:40 PM</big>'+
+							'</td>'+
+						'</tr>'+						
+						'<tr>'+
+							'<td align="left">'+
+								'<a href=""><big>Available</big></a>'+
+							'</td>'+
+							'<td align="left">'+
+								'<big>The Best Magician</big>'+
+							'</td>'+
+							'<td align="left">'+
+								'<big>3:30 PM</big>'+
+							'</td>'+
+						'</tr>'+
+						'<tr>'+
+							'<td align="left">'+
+								'<a href=""><big>Available</big></a>'+
+							'</td>'+
+							'<td align="left">'+
+								'<big>Iron Man 3</big>'+
+							'</td>'+
+							'<td align="left">'+
+								'<big>3:50 PM</big>'+
+							'</td>'+
+						'</tr>'+
+					'</table>'+
+				'</div>'+
+				'<div class="panel panel-info">'+
+  					'<div class="panel-heading"><b>Offers here...</b></div>'+
+  					'<ul class="list-group">'+
+    					'<li class="list-group-item"><big>Buy 3 tickets and get the fourth one for <i><em>FREE</em></i>!</big></li>'+
+    					'<li class="list-group-item"><big>Buy 2 tickets and your coke + popcorn is on us!</big></li>'+
+		  			'</ul>'+
+				'</div>'+
+      	'</div>'
 
 		var infowindow = new google.maps.InfoWindow({
 			content: contentString

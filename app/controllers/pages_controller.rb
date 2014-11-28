@@ -14,13 +14,13 @@ class PagesController < ApplicationController
   			'<table class="table">'+
 				'<tr>'+
 					'<td align="center">'+
-						'<a href=""><img src="http://localhost:3000/coupons/coupon_1.jpg"/></a>'+
+						'<a href="http://www.latrattoriawv.com/10-off-coupon/"><img src="http://localhost:3000/coupons/coupon_1.jpg"/></a>'+
 					'</td>'+
 					'<td align="center">'+
-						'<a href=""><img src="http://localhost:3000/coupons/coupon_2.jpg"/></a>'+
+						'<a href="http://www.partycity.com/category/entertaining+serving.do"><img src="http://localhost:3000/coupons/coupon_2.jpg"/></a>'+
 					'</td>'+
 					'<td align="center">'+
-						'</a><img src="http://localhost:3000/coupons/coupon_3.jpg"/></a>'+
+						'<a href="http://www.partycity.com/category/entertaining+serving.do"><img src="http://localhost:3000/coupons/coupon_3.jpg"/></a>'+
 					'</td>'+
 				'</tr>'+
 			'</table>'+
