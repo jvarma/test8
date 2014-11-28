@@ -14,6 +14,9 @@ Onthego::Application.routes.draw do
 
   match '/gas-stations', to: 'pages#gas_stations', via: 'get', as: :gas_stations
 
+  match '/movies', to: 'pages#movies', via: 'get', as: :movies
+
+
   root "pages#home"
 
   #match '/biz/signup',  to: 'sellers#new',  via: 'get'

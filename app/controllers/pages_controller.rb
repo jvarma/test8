@@ -15,16 +15,16 @@ class PagesController < ApplicationController
   			'<tr>'+
     			'<td><img src="http://localhost:3000/icons/gas_station_24X24.png"/></td>'+
     			'<td>'+
-    				'<a href="http://localhost:3000/gas-stations"><big>7 gas stations</big></a>'+
+    				'<a href="http://localhost:3000/gas-stations"><big>3 gas stations</big></a>'+
 				'</td>'+
     		'</tr>'+
   			'<tr>'+
     			'<td><img src="http://localhost:3000/icons/restaurants_24X24.png"/></td>'+
-    			'<td><a href=""><big>3 restaurants</big></a></td>'+
+    			'<td><a href=""><big>5 restaurants</big></a></td>'+
     		'</tr>'+
   			'<tr>'+
     			'<td><img src="http://localhost:3000/icons/theatre_24X24.png"/></td>'+
-    			'<td><a href=""><big>1 movie theatre</big></a></td>'+
+    			'<td><a href="http://localhost:3000/movies"><big>1 movie theatre</big></a></td>'+
     		'</tr>'+
   			'<tr>'+
     			'<td><img src="http://localhost:3000/icons/bar_24X24.png"/></td>'+
@@ -68,5 +68,20 @@ class PagesController < ApplicationController
 
 		gon.latlng = latlng
 		
+	end
+
+
+	def movies
+		@page = "movie"
+		gon.lat = 28.57
+		gon.lng = 77.32
+		
+		latlng = Array.new(1)
+
+		lat = 28.5701
+		lng = 77.3181
+		latlng[0] = [lat, lng]
+
+		gon.latlng = latlng
 	end
 end
