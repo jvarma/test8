@@ -5,9 +5,7 @@ class PagesController < ApplicationController
 		gon.lat = 28.57
 		gon.lng = 77.32
 		gon.heading = "Within 5 miles of your location"
-		gon.infoWindowContent = '<div id="content">'+
-      '<div id="siteNotice">'+
-      '</div>'+
+		gon.infoWindowContent = '<div class="infowindow">'+
       '<h2 id="firstHeading" class="firstHeading">Within 5 miles...</h2>'+
       '<div id="bodyContent">'+
 
@@ -76,12 +74,8 @@ class PagesController < ApplicationController
 		gon.lat = 28.57
 		gon.lng = 77.32
 		
-		latlng = Array.new(1)
-
-		lat = 28.5701
-		lng = 77.3181
-		latlng[0] = [lat, lng]
-
-		gon.latlng = latlng
+		gon.theatre_lat = 28.5701
+		gon.theatre_lng = 77.3181
+		
 	end
 end

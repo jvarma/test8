@@ -13,14 +13,56 @@
 				
 		var map=new google.maps.Map(document.getElementById("map-canvas"), mapProp);
 
-		for (var x = 0; x < gon.latlng.length; x++) {
-			var position = new google.maps.LatLng(gon.latlng[x][0], gon.latlng[x][1]);
-			new google.maps.Marker({
-				position: position,
-				map: map,
-				icon: 'http://localhost:3000/icons/theatre_24X24.png'
+		var position = new google.maps.LatLng(gon.theatre_lat, gon.theatre_lng);
+
+		var marker = new google.maps.Marker({
+			position: position,
+			map: map,
+			icon: 'http://localhost:3000/icons/theatre_24X24.png'
+		});
+
+		var contentString = '<div class="infowindow">'+
+      '<h2 id="firstHeading" class="firstHeading">Next change @ 3:30 PM...</h2>'+
+      '<div id="bodyContent">'+
+      	'<iframe title="YouTube Video" src="http://www.youtube.com/embed/hqiNL4Hn04A" width="100%" frameborder="1" allowfullscreen></iframe>'+
+      	'<br />'+
+      	'When you <a href=""><b>buy tickets</b></a> for this movie, <b>your coke and popcorn is on us!</b>'+
+
+		'<table style="width:100%">'+
+			'<th>More movies here...</th>'+
+  			'<tr>'+
+    			'<td>3:30 PM</td>'+
+    			'<td>'+
+    				'<big>The man who new infinity</big>'+
+				'</td>'+
+				'<td>'+
+    				'<a href="">Available!</a>'+
+				'</td>'+
+    		'</tr>'+
+    		'<tr>'+
+    			'<td>3:50 PM</td>'+
+    			'<td>'+
+    				'<big>Iron Man 3</big>'+
+				'</td>'+
+				'<td>'+
+    				'<a href="">Running out!</a>'+
+				'</td>'+
+    		'</tr>'+
+		'</table>'+
+		'<a href="">View all</a> (7) | '+
+		'<a href="">Directions</a>'+
+      '</div>'+
+      '</div>'
+
+		var infowindow = new google.maps.InfoWindow({
+			content: contentString
+		});
+
+      google.maps.event.addListener(marker, 'mouseover', function(){
+				infowindow.open(map, marker);
 			});
-		} 
+
+
 	}
 
 			google.maps.event.addDomListener(window, 'load', initialize);
