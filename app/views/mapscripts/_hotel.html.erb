@@ -1,0 +1,149 @@
+<script>
+
+	function initialize() {
+		var myLatLng = new google.maps.LatLng(gon.lat, gon.lng);
+
+		var position = new google.maps.LatLng(gon.hotel_lat, gon.hotel_lng);
+
+		var mapProp = {
+			center: position,
+  			zoom:12,
+  			panControl: false,
+  			zoomControl: false,
+  			mapTypeId:google.maps.MapTypeId.ROADMAP
+  		};
+				
+		var map=new google.maps.Map(document.getElementById("map-canvas"), mapProp);
+
+
+		var hotel_icon_url = "http://" + gon.hostname + "/icons/hotel_24X24.png"
+		var gas_station_icon_url = "http://" + gon.hostname + "/icons/gas_station_48X48.png"
+		var gas_station_url = "http://" + gon.hostname + "/gas-stations"
+		var theatre_url = "http://" + gon.hostname + "/movies"
+		var park_icon_url = "http://" + gon.hostname + "/icons/park_48X48.png"
+		var bar_icon_url = "http://" + gon.hostname + "/icons/bar_48X48.png"
+		var theatre_icon_url = "http://" + gon.hostname + "/icons/theatre_48X48.png"
+		var boxty_image_url = "http://" + gon.hostname + "/images/boxty_100X100.png"
+		var room_1_image_url = "http://" + gon.hostname + "/images/room_1.jpg"
+		var room_2_image_url = "http://" + gon.hostname + "/images/room_2.jpg"
+		var room_3_image_url = "http://" + gon.hostname + "/images/room_3.jpg"
+
+
+
+		var marker = new google.maps.Marker({
+			position: position,
+			map: map,
+			icon: hotel_icon_url
+		});
+
+		var contentString = '<div class="infowindow">'+
+      		
+				'<div class="panel panel-primary">'+
+  					'<div class="panel-heading"><big>The Eden (2 Stars)</big></div>'+
+  					'<p style="color:grey;">Last updated: About 4 hours ago</p>'+
+  					'<table class="table">'+
+						'<tr>'+
+							'<td align="center">'+
+								'<img src='+ room_1_image_url+'/>'+
+							'</td>'+
+							'<td align="center">'+
+								'<img src='+ room_2_image_url+'/>'+
+							'</td>'+
+							'<td align="center">'+
+								'<img src='+ room_3_image_url+'/>'+
+							'</td>'+
+						'</tr>'+
+						'<tr>'+
+							'<td align="center">'+
+								'<p><a href="">Premium King</a></p>'+						
+							'</td>'+
+							'<td align="center">'+
+								'<p><a href="">Standard Queen</a></p>'+						
+							'</td>'+
+							'<td align="center">'+
+								'<p><a href="">Deluxe Twin</a></p>'+						
+							'</td>'+
+						'</tr>'+
+						'<tr>'+
+							'<td align="center">'+
+								'<p style="color:red;text-decoration:line-through;">INR 2900</p>'+						
+							'</td>'+
+							'<td align="center">'+
+								'<p style="color:red;text-decoration:line-through;">INR 2500</p>'+						
+							'</td>'+
+							'<td align="center">'+
+								'<p style="color:red;text-decoration:line-through;">INR 2000</p>'+						
+							'</td>'+
+						'</tr>'+
+						'<tr>'+
+							'<td align="center">'+
+								'<p style="color:green;"><big>INR 2700</big></p>'+						
+							'</td>'+
+							'<td align="center">'+
+								'<p style="color:green;"><big>INR 2300</big></p>'+						
+							'</td>'+
+							'<td align="center">'+
+								'<p style="color:green;"><big>INR 1800</big></p>'+						
+							'</td>'+
+						'</tr>'+
+						'<tr>'+
+							'<td align="center">'+
+								'<p><a href="">Book this room</a></p><p>Available: 3</p>'+						
+							'</td>'+
+							'<td align="center">'+
+								'<p><a href="">Book this room</a></p><p>Available: 8</p>'+						
+							'</td>'+
+							'<td align="center">'+
+								'<p><a href="">Book this room</a></p><p>Available: 5</p>'+						
+							'</td>'+
+						'</tr>'+
+					'</table>'+
+				'</div>'+
+				'<div class="panel panel-info">'+
+  					'<div class="panel-heading"><b>Chef special today...</b></div>'+
+  					'<table class="table">'+
+						'<tr>'+
+							'<td align="left">'+
+								'<img src='+ boxty_image_url+'/>'+						
+							'</td>'+
+							'<td align="left">'+
+								'<p>A traditional Irish potato pancake, its finely grated raw potato and mashed potato mixed together with flour, baking soda, buttermilk and occasionally egg, then cooked like a pancake on a griddle pan.</p>'+
+								'<p><a href="http://en.wikipedia.org/wiki/Boxty">Know more</a></p>'+						
+							'</td>'+
+						'</tr>'+
+					'</table>'+
+				'</div>'+
+				'<div class="panel panel-info">'+
+  					'<div class="panel-heading"><b>Whats around...</b></div>'+
+  					'<table class="table">'+
+						'<tr>'+
+							'<td align="center">'+
+								'<a href="'+gas_station_url+'">'+'<img src='+ gas_station_icon_url+'/>'+'</a>'+						
+							'</td>'+
+							'<td align="center">'+
+								'<a href="'+theatre_url+'">'+'<img src='+ theatre_icon_url+'/>'+'</a>'+												'</td>'+
+							'<td align="center">'+
+								'<img src='+ park_icon_url+'/>'+						
+							'</td>'+
+							'<td align="center">'+
+								'<img src='+ bar_icon_url+'/>'+						
+							'</td>'+
+						'</tr>'+
+					'</table>'+
+				'</div>'+
+
+      	'</div>'
+
+		var infowindow = new google.maps.InfoWindow({
+			content: contentString
+		});
+
+      google.maps.event.addListener(marker, 'mouseover', function(){
+				infowindow.open(map, marker);
+			});
+
+
+	}
+
+			google.maps.event.addDomListener(window, 'load', initialize);
+</script>

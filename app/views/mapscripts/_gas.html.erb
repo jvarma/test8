@@ -18,13 +18,14 @@
 		var infowindow = new google.maps.InfoWindow({
 			content: contentString
 		});
+		var gas_station_icon_url = "http://" + gon.hostname + "/icons/gas_station_24X24.png"
 
 		for (var x = 0; x < gon.latlng.length; x++) {
 			var position = new google.maps.LatLng(gon.latlng[x][0], gon.latlng[x][1]);
 			var marker = new google.maps.Marker({
 				position: position,
 				map: map,
-				icon: 'http://localhost:3000/icons/gas_station_24X24.png'
+				icon: gas_station_icon_url
 			});
 			google.maps.event.addListener(marker, 'mouseover', function(){
 				infowindow.open(map, this);

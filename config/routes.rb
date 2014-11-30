@@ -16,6 +16,7 @@ Onthego::Application.routes.draw do
 
   match '/movies', to: 'pages#movies', via: 'get', as: :movies
 
+  match '/hotels', to: 'pages#hotels', via: 'get', as: :hotels
 
   root "pages#home"
 
