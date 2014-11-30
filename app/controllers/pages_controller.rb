@@ -5,6 +5,7 @@ class PagesController < ApplicationController
 		gon.lat = 28.57
 		gon.lng = 77.32
 		gon.heading = "Within 5 miles of your location"
+		@hostname = request.host
 		gon.infoWindowContent = '<div class="infowindow">'+
       	'<div id="bodyContent">'+
 
