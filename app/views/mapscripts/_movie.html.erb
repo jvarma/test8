@@ -3,9 +3,11 @@
 	function initialize() {
 		var myLatLng = new google.maps.LatLng(gon.lat, gon.lng);
 
+		var position = new google.maps.LatLng(gon.theatre_lat, gon.theatre_lng);
+
 		var mapProp = {
-			center: myLatLng,
-  			zoom:18,
+			center: position,
+  			zoom:12,
   			panControl: false,
   			zoomControl: false,
   			mapTypeId:google.maps.MapTypeId.ROADMAP
@@ -13,12 +15,13 @@
 				
 		var map=new google.maps.Map(document.getElementById("map-canvas"), mapProp);
 
-		var position = new google.maps.LatLng(gon.theatre_lat, gon.theatre_lng);
+
+		var theatre_icon_url = "http://" + gon.hostname + "/icons/theatre_24X24.png"
 
 		var marker = new google.maps.Marker({
 			position: position,
 			map: map,
-			icon: 'http://localhost:3000/icons/theatre_24X24.png'
+			icon: theatre_icon_url
 		});
 
 		var contentString = '<div class="infowindow">'+
